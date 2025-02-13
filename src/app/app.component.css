@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+  
+.left-column {
+    flex: 1;
+    padding-right: 2rem;
+    text-align: left;
+}
+  
+.right-column {
+    flex: 2;
+    overflow-y: auto;
+    height: max-content;
+    padding-left: 2rem;
+}
+  
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+  
+nav ul li {
+    margin-bottom: 1rem;
+}
+  
+.social-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+  
+section {
+    margin-bottom: 2rem;
+}
+
+
+.right-column {
+    height: 100vh;
+    overflow-y: scroll;
+    margin: 3rem;
+}
+
+.right-column::-webkit-scrollbar {
+    display: none;
+}
+
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

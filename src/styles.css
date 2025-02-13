@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    color: aliceblue;
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42/var(--tw-bg-opacity));
+}
+
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
