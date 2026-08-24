@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elias Acevedo — Fullstack Developer</title>
+<meta name="description" content="Elias Acevedo, Fullstack Developer specialized in Java/Spring Boot and Angular. 5+ years building enterprise applications and microservices architectures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Mobile-only header with hamburger (hidden on desktop) -->
+<div class="wrap">
+  <header class="mobile-header">
+    <div class="mh-name">Elias<span>.</span>Acevedo</div>
+    <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </header>
+</div>
+
+<!-- Mobile fullscreen menu overlay (independent of layout, fixed) -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#about" class="mnav-link"><span class="mnav-index">01</span> About</a></li>
+      <li><a href="#experience" class="mnav-link"><span class="mnav-index">02</span> Experience</a></li>
+      <li><a href="#skills" class="mnav-link"><span class="mnav-index">03</span> Stack</a></li>
+      <li><a href="#projects" class="mnav-link"><span class="mnav-index">04</span> Projects</a></li>
+      <li><a href="#impact" class="mnav-link"><span class="mnav-index">05</span> Impact</a></li>
+      <li><a href="#education" class="mnav-link"><span class="mnav-index">06</span> Education</a></li>
+      <li><a href="#contact" class="mnav-link"><span class="mnav-index">07</span> Contact</a></li>
+    </ul>
+  </nav>
+  <div class="social-row">
+    <a href="mailto:elias.acevedo.06.22@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/elias-acevedo-7b3463179/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16M12 11v5"/></svg>
+    </a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- Desktop sidebar (hidden on mobile) -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand-eyebrow">whoami</div>
+      <h1 class="brand-name">Elias<br>Acevedo</h1>
+      <p class="brand-role">Fullstack Developer — <strong>Java / Spring Boot</strong> &amp; <strong>Angular</strong></p>
+      <div class="status-pill"><span class="status-dot"></span> Open to remote roles (US)</div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about"><span class="nav-line"></span><span class="nav-index">01</span> About</a></li>
+          <li><a href="#experience"><span class="nav-line"></span><span class="nav-index">02</span> Experience</a></li>
+          <li><a href="#skills"><span class="nav-line"></span><span class="nav-index">03</span> Stack</a></li>
+          <li><a href="#projects"><span class="nav-line"></span><span class="nav-index">04</span> Projects</a></li>
+          <li><a href="#impact"><span class="nav-line"></span><span class="nav-index">05</span> Impact</a></li>
+          <li><a href="#education"><span class="nav-line"></span><span class="nav-index">06</span> Education</a></li>
+          <li><a href="#contact"><span class="nav-line"></span><span class="nav-index">07</span> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="social-row">
+        <a href="mailto:elias.acevedo.06.22@gmail.com" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/elias-acevedo-7b3463179/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16M12 11v5"/></svg>
+        </a>
+        <a href="tel:+542634614386" aria-label="Phone" title="Phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.7a2 2 0 0 1-.4 2.2L8.1 10a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.2-.4c.9.4 1.8.6 2.7.7a2 2 0 0 1 1.6 2Z"/></svg>
+        </a>
+      </div>
+      <div class="location">Mendoza, AR · GMT-3</div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero-eyebrow">// Fullstack Developer</div>
+        <h1>I build solid backends and the interfaces that <span class="hl">connect them.</span></h1>
+        <p>5+ years designing enterprise applications and microservices architectures with <strong style="color:var(--text)">Java / Spring Boot</strong> on the backend and <strong style="color:var(--text)">Angular</strong> on the frontend — based in Mendoza, Argentina, working with distributed teams worldwide.</p>
+        <div class="hero-ctas">
+          <button class="btn solid" onclick="document.getElementById('contact').scrollIntoView()">Let's talk →</button>
+          <button class="btn ghost" onclick="document.getElementById('experience').scrollIntoView()">See experience</button>
+        </div>
+
+        <div class="terminal" role="img" aria-label="Simulated terminal showing Elias's tech stack">
+          <div class="terminal-head">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="file">elias@mendoza:~/portfolio</span>
+          </div>
+          <div class="terminal-body" id="terminalBody"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="section-heading reveal">
+          <span class="section-index">01</span><h2>About</h2><span class="rule"></span>
+        </div>
+        <div class="about-text reveal">
+          <p>I'm a <strong>Fullstack Developer</strong> focused on <strong>Java / Spring Boot and Angular</strong>, with experience delivering secure, scalable REST APIs, modernizing legacy systems through microservices migration, and deploying containerized services on <strong>Kubernetes / OpenShift</strong>.</p>
+          <p>Over the past year I've integrated <strong>AI-assisted development workflows</strong> to automate test generation, technical documentation, and code quality review — always validating each result before merging. I'm comfortable working in agile, distributed teams, and I enjoy mentoring junior developers.</p>
+          <p>Currently looking for a <strong>remote, backend or fullstack role with U.S.-based companies</strong>.</p>
+        </div>
+
+        <div class="facts-grid reveal">
+          <div class="fact"><div class="fact-label">Location</div><div class="fact-value">Mendoza, Argentina (GMT-3)</div></div>
+          <div class="fact"><div class="fact-label">Availability</div><div class="fact-value">Remote — U.S. roles</div></div>
+          <div class="fact"><div class="fact-label">Experience</div><div class="fact-value">5+ years</div></div>
+          <div class="fact"><div class="fact-label">Languages</div><div class="fact-value">Spanish (native), English (professional)</div></div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="section-heading reveal">
+          <span class="section-index">02</span><h2>Experience</h2><span class="rule"></span>
+        </div>
+
+        <div class="changelog">
+          <div class="entry current reveal">
+            <div class="entry-dot"></div>
+            <div class="entry-version">v5.0.0 — current</div>
+            <div class="entry-head">
+              <div><div class="entry-role">Fullstack Developer (Java / Angular) · <span class="entry-org">NTT DATA</span></div></div>
+              <div class="entry-period">Jul 2025 — Present</div>
+            </div>
+            <ul class="entry-bullets">
+              <li>Build and maintain a microservices-based application with Spring Boot on the backend and Angular 17 on the frontend, deployed as independently scaled services across Kubernetes pods.</li>
+              <li>Manage frontend deployments on OpenShift and backend releases through Jenkins pipelines, ensuring consistent, containerized delivery across environments.</li>
+              <li>Configure and use custom AI-assisted development skills to generate unit/integration tests, reviewing and validating each generated test before merging.</li>
+              <li>Automate technical documentation generation with AI tooling, keeping service docs up to date without manual overhead.</li>
+              <li>Integrate AI-assisted code review into the development workflow, improving code quality consistency and catching issues earlier in the pipeline.</li>
+            </ul>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry-dot"></div>
+            <div class="entry-version">v4.0.0</div>
+            <div class="entry-head">
+              <div><div class="entry-role">Fullstack Developer (Java / Angular) · <span class="entry-org">IT Patagonia</span></div></div>
+              <div class="entry-period">Feb 2022 — Jul 2025</div>
+            </div>
+            <ul class="entry-bullets">
+              <li>Architected and delivered enterprise web applications end-to-end using Angular and Spring Boot for enterprise clients.</li>
+              <li>Led migration of a monolithic application into microservices, reducing deployment time by 35% and improving system modularity.</li>
+              <li>Designed and implemented authentication and role-based authorization with Spring Security, hardening the application against the OWASP Top 10.</li>
+              <li>Built and consumed secure RESTful APIs powering core business features.</li>
+              <li>Containerized applications with Docker, standardizing deployments across dev, staging and production, cutting environment setup time by 40%.</li>
+              <li>Automated build, test and deployment pipelines with GitLab CI/CD, shortening time-to-production by 20%.</li>
+            </ul>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry-dot"></div>
+            <div class="entry-version">v3.1.0</div>
+            <div class="entry-head">
+              <div><div class="entry-role">Java Instructor · <span class="entry-org">Digital House</span></div></div>
+              <div class="entry-period">Jul 2022 — Dec 2022</div>
+            </div>
+            <ul class="entry-bullets">
+              <li>Delivered Java Core and Advanced curriculum (OOP, Collections, Exception Handling) to a cohort of 100 students.</li>
+              <li>Taught Spring Framework, REST API design, and Hibernate ORM through hands-on, project-based instruction.</li>
+              <li>Coached students on unit testing (JUnit), design patterns, and clean code practices, improving course pass rate by 35%.</li>
+              <li>Mentored students through real-world backend projects, providing code review and technical feedback.</li>
+            </ul>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry-dot"></div>
+            <div class="entry-version">v1.0.0</div>
+            <div class="entry-head">
+              <div><div class="entry-role">Fullstack Developer · <span class="entry-org">Interkont</span></div></div>
+              <div class="entry-period">Feb 2021 — Jan 2022</div>
+            </div>
+            <ul class="entry-bullets">
+              <li>Developed frontend components and backend business logic for a construction contract management system used by 1,000+ users.</li>
+              <li>Implemented and maintained core business workflows using Java and JSF, supporting contract approval and tracking processes.</li>
+              <li>Maintained and enhanced legacy enterprise applications while contributing to the full software development lifecycle.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="section-heading reveal">
+          <span class="section-index">03</span><h2>Tech Stack</h2><span class="rule"></span>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <div class="tag-row">
+              <span class="tag">Java 11/17</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span>
+              <span class="tag">Spring Data JPA</span><span class="tag">Hibernate</span><span class="tag">REST APIs</span>
+              <span class="tag">Microservices</span><span class="tag">Spring Cloud</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <div class="tag-row">
+              <span class="tag">Angular 14–17</span><span class="tag">TypeScript</span><span class="tag">RxJS</span>
+              <span class="tag">Angular Material</span><span class="tag">PrimeNG</span><span class="tag">Bootstrap</span>
+              <span class="tag">HTML5</span><span class="tag">CSS3</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>DevOps &amp; Cloud</h3>
+            <div class="tag-row">
+              <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">OpenShift</span>
+              <span class="tag">Git</span><span class="tag">GitLab CI/CD</span><span class="tag">Jenkins</span>
+              <span class="tag">Maven</span><span class="tag">AWS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Databases &amp; Testing</h3>
+            <div class="tag-row">
+              <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">JUnit</span>
+              <span class="tag">Mockito</span><span class="tag">TDD</span><span class="tag">Integration Testing</span>
+            </div>
+          </div>
+          <div class="skill-group" style="grid-column:1/-1;">
+            <h3>AI-Assisted Development</h3>
+            <div class="tag-row">
+              <span class="tag">AI-driven test generation</span><span class="tag">Automated documentation</span><span class="tag">AI-assisted code review</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-heading reveal">
+          <span class="section-index">04</span><h2>Personal Projects</h2><span class="rule"></span>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="250" fill="#0d1015"/>
+                <rect x="0" y="0" width="400" height="26" fill="#1a1e26"/>
+                <circle cx="14" cy="13" r="3.5" fill="#e0605a"/>
+                <circle cx="26" cy="13" r="3.5" fill="#e0b95a"/>
+                <circle cx="38" cy="13" r="3.5" fill="#67c98f"/>
+                <rect x="18" y="42" width="70" height="150" rx="4" fill="#161a21" stroke="#2a2f3a"/>
+                <rect x="26" y="52" width="54" height="6" rx="2" fill="#d9944e"/>
+                <rect x="26" y="66" width="40" height="4" rx="2" fill="#3a4150"/>
+                <rect x="26" y="112" width="46" height="3" rx="1.5" fill="#5b6270"/>
+                <rect x="26" y="120" width="38" height="3" rx="1.5" fill="#5b6270"/>
+                <rect x="26" y="128" width="42" height="3" rx="1.5" fill="#5b6270"/>
+                <rect x="26" y="150" width="46" height="18" rx="4" fill="#d9944e" opacity="0.85"/>
+                <rect x="104" y="42" width="278" height="150" rx="4" fill="#161a21" stroke="#2a2f3a"/>
+                <rect x="120" y="58" width="140" height="10" rx="2" fill="#e7e9ed"/>
+                <rect x="120" y="76" width="200" height="6" rx="2" fill="#5b6270"/>
+                <rect x="120" y="88" width="170" height="6" rx="2" fill="#5b6270"/>
+                <rect x="120" y="112" width="70" height="26" rx="5" fill="none" stroke="#d9944e" stroke-width="1.5"/>
+                <rect x="200" y="112" width="70" height="26" rx="5" fill="#d9944e" opacity="0.15" stroke="#6f9bc7" stroke-width="1.5"/>
+                <rect x="120" y="156" width="242" height="1" fill="#2a2f3a"/>
+                <rect x="120" y="168" width="60" height="5" rx="2" fill="#6f9bc7"/>
+                <rect x="190" y="168" width="60" height="5" rx="2" fill="#5b6270"/>
+                <rect x="260" y="168" width="60" height="5" rx="2" fill="#5b6270"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="project-title">This Portfolio</div>
+              <p class="project-desc">The very site you're looking at — a personal portfolio built from scratch with vanilla HTML, CSS and JavaScript, no frameworks. Fixed sidebar navigation, scroll-based active states, a typing terminal animation, and a fully responsive layout with a dedicated mobile menu.</p>
+              <div class="project-tags">
+                <span>HTML5</span><span>CSS3</span><span>Vanilla JS</span><span>Responsive</span>
+              </div>
+              <div class="project-links">
+                <a class="btn small disabled" title="Not deployed yet">Live demo</a>
+                <a class="btn small ghost disabled" title="Repo coming soon">Source code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-more reveal">
+            More projects coming soon —<br>this space is ready for what I build next.
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT -->
+      <section id="impact">
+        <div class="section-heading reveal">
+          <span class="section-index">05</span><h2>Impact</h2><span class="rule"></span>
+        </div>
+        <div class="work-grid">
+          <div class="work-card reveal">
+            <div class="work-top">
+              <div>
+                <div class="work-title">Monolith → microservices migration</div>
+                <div class="work-desc">Led the full migration of a monolithic application to a microservices architecture at IT Patagonia, improving modularity and delivery speed.</div>
+              </div>
+              <div class="work-metric">−35%</div>
+            </div>
+            <div class="work-tags"><span>Spring Boot</span><span>Microservices</span><span>Architecture</span></div>
+          </div>
+
+          <div class="work-card reveal">
+            <div class="work-top">
+              <div>
+                <div class="work-title">Environment standardization with Docker</div>
+                <div class="work-desc">Containerized applications to unify dev, staging and production, drastically cutting the time needed to spin up a new environment.</div>
+              </div>
+              <div class="work-metric">−40%</div>
+            </div>
+            <div class="work-tags"><span>Docker</span><span>DevOps</span></div>
+          </div>
+
+          <div class="work-card reveal">
+            <div class="work-top">
+              <div>
+                <div class="work-title">CI/CD pipelines with GitLab</div>
+                <div class="work-desc">Automated build, test and deploy end-to-end, reducing manual release effort and shortening time-to-production.</div>
+              </div>
+              <div class="work-metric">−20%</div>
+            </div>
+            <div class="work-tags"><span>GitLab CI/CD</span><span>Automation</span></div>
+          </div>
+
+          <div class="work-card reveal">
+            <div class="work-top">
+              <div>
+                <div class="work-title">Contract management system</div>
+                <div class="work-desc">Development and maintenance of a construction contract management system in production, with approval and tracking workflows.</div>
+              </div>
+              <div class="work-metric">1,000+</div>
+            </div>
+            <div class="work-tags"><span>Java</span><span>JSF</span><span>Active users</span></div>
+          </div>
+
+          <div class="work-card reveal">
+            <div class="work-top">
+              <div>
+                <div class="work-title">Training new developers</div>
+                <div class="work-desc">Taught Java Core/Advanced and Spring Framework to a cohort of 100 students at Digital House, with a focus on testing and clean code.</div>
+              </div>
+              <div class="work-metric">+35%</div>
+            </div>
+            <div class="work-tags"><span>Mentoring</span><span>JUnit</span><span>Clean Code</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <div class="section-heading reveal">
+          <span class="section-index">06</span><h2>Education</h2><span class="rule"></span>
+        </div>
+        <div class="edu-card reveal">
+          <div>
+            <div class="edu-degree">Bachelor's Degree in Software Engineering</div>
+            <div class="edu-school">Universidad Tecnológica Nacional — Mendoza, Argentina</div>
+          </div>
+          <div class="edu-year">2023</div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact">
+        <div class="section-heading reveal">
+          <span class="section-index">07</span><h2>Contact</h2><span class="rule"></span>
+        </div>
+        <p class="reveal">I'm actively looking for a remote backend or fullstack role with U.S.-based companies. If my profile fits what you're looking for, reach out — I respond quickly.</p>
+        <div class="contact-links reveal">
+          <div class="contact-link" onclick="copyToClipboard('elias.acevedo.06.22@gmail.com', 'Email copied')">
+            <div class="cl-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <div><div class="cl-label">Email</div><div class="cl-value">elias.acevedo.06.22@gmail.com</div></div>
+            </div>
+            <span class="cl-hint">copy</span>
+          </div>
+          <a class="contact-link" href="https://www.linkedin.com/in/elias-acevedo-7b3463179/" target="_blank" rel="noopener">
+            <div class="cl-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16M12 11v5"/></svg>
+              <div><div class="cl-label">LinkedIn</div><div class="cl-value">e-acevedo-fullstack-developer</div></div>
+            </div>
+            <span class="cl-hint">open ↗</span>
+          </a>
+          <div class="contact-link" onclick="copyToClipboard('+54 2634614386', 'Phone number copied')">
+            <div class="cl-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.7a2 2 0 0 1-.4 2.2L8.1 10a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.2-.4c.9.4 1.8.6 2.7.7a2 2 0 0 1 1.6 2Z"/></svg>
+              <div><div class="cl-label">Phone</div><div class="cl-value">+54 263 461-4386</div></div>
+            </div>
+            <span class="cl-hint">copy</span>
+          </div>
+        </div>
+
+        <footer>
+          Designed &amp; built by Elias Acevedo · Mendoza, Argentina · <span id="year"></span>
+        </footer>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
