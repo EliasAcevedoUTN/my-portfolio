@@ -50,23 +50,83 @@ button{ font:inherit; }
   padding:0 48px;
 }
 
-/* ================= MOBILE HEADER (shown < mobile-bp) ================= */
-.mobile-header{
+/* ================= MOBILE STICKY NAV (shown < mobile-bp) ================= */
+.mobile-nav{
   display:none;
-  align-items:center;
-  justify-content:space-between;
   width:100%;
-  padding:20px 0;
   position:sticky;
   top:0;
-  background:rgba(18,21,26,0.9);
+  background:rgba(13,16,21,0.96);
   backdrop-filter:blur(10px);
   z-index:150;
   border-bottom:1px solid transparent;
 }
-.mobile-header.scrolled{ border-bottom-color:var(--border); }
-.mobile-header .mh-name{ font-family:var(--display); font-weight:700; font-size:18px; }
-.mobile-header .mh-name span{ color:var(--accent); }
+.mobile-nav.scrolled{ border-bottom-color:var(--border); }
+
+.mobile-nav-inner{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+}
+
+.mobile-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  padding:16px 0 14px 0;
+}
+.mobile-header .mh-info{ min-width:0; }
+.mobile-header .mh-name{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:23px;
+  line-height:1.2;
+  color:var(--text);
+  white-space:nowrap;
+}
+.mobile-header .mh-role{
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--accent);
+  margin-top:3px;
+  letter-spacing:.01em;
+}
+
+/* Quick section pills — always visible, horizontally scrollable */
+.mobile-subnav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:0 0 14px 0;
+  margin:0 -24px;
+  padding-left:24px;
+  padding-right:24px;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  scroll-snap-type:x proximity;
+}
+.mobile-subnav::-webkit-scrollbar{ display:none; }
+.subnav-pill{
+  flex-shrink:0;
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--text-dim);
+  padding:7px 14px;
+  border:1px solid var(--border);
+  border-radius:100px;
+  background:var(--surface);
+  transition:color .2s ease, border-color .2s ease, background .2s ease;
+  scroll-snap-align:start;
+}
+.subnav-pill.active{
+  color:var(--bg);
+  background:var(--accent);
+  border-color:var(--accent);
+  font-weight:500;
+}
 
 .hamburger{
   width:42px; height:42px;
@@ -228,15 +288,17 @@ button{ font:inherit; }
 
 .sidebar-footer{ display:flex; flex-direction:column; gap:14px; }
 .social-row{ display:flex; gap:16px; }
-.social-row a{
+.social-row a, .social-row .icon-btn{
   width:38px; height:38px;
   display:flex; align-items:center; justify-content:center;
   border:1px solid var(--border);
   border-radius:8px;
   color:var(--text-dim);
+  background:transparent;
+  cursor:pointer;
   transition:color .2s ease, border-color .2s ease, transform .2s ease;
 }
-.social-row a:hover{ color:var(--accent); border-color:var(--accent); transform:translateY(-2px); }
+.social-row a:hover, .social-row .icon-btn:hover{ color:var(--accent); border-color:var(--accent); transform:translateY(-2px); }
 .social-row svg{ width:17px; height:17px; }
 .sidebar-footer .location{ font-family:var(--mono); font-size:10.5px; color:var(--text-faint); }
 
@@ -470,11 +532,12 @@ footer{ margin-top:100px; font-family:var(--mono); font-size:11.5px; color:var(-
 @media (max-width: 900px){
   .wrap{ flex-direction:column; padding:0 24px; }
   .sidebar{ display:none; }
-  .mobile-header{ display:flex; }
-  main{ padding:40px 0 90px 0; }
+  .mobile-nav{ display:block; }
+  main{ padding:32px 0 90px 0; }
   .facts-grid{ grid-template-columns:1fr 1fr; }
   .skills-grid{ grid-template-columns:1fr; }
   .projects-grid{ grid-template-columns:1fr; }
+  section{ scroll-margin-top:140px; }
 }
 
 @media (max-width: 560px){
@@ -485,4 +548,5 @@ footer{ margin-top:100px; font-family:var(--mono); font-size:11.5px; color:var(-
   .work-metric{ font-size:26px; }
   .entry-head{ flex-direction:column; align-items:flex-start; }
   .mobile-menu nav a{ font-size:19px; }
+  .mobile-header .mh-name{ font-size:19px; }
 }

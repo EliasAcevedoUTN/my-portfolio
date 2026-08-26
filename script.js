@@ -40,11 +40,11 @@ window.addEventListener('resize', () => {
   if(window.innerWidth > 900 && mobileMenu.classList.contains('open')) closeMenu();
 });
 
-// ---------- Mobile header background on scroll ----------
-const mobileHeader = document.querySelector('.mobile-header');
-if(mobileHeader){
+// ---------- Mobile nav background on scroll ----------
+const mobileNav = document.querySelector('.mobile-nav');
+if(mobileNav){
   window.addEventListener('scroll', () => {
-    mobileHeader.classList.toggle('scrolled', window.scrollY > 8);
+    mobileNav.classList.toggle('scrolled', window.scrollY > 8);
   }, { passive:true });
 }
 
@@ -60,19 +60,30 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ---------- Active nav link on scroll (desktop sidebar only) ----------
+// ---------- Active section tracking (desktop sidebar + mobile quick-nav pills) ----------
 const navLinks = document.querySelectorAll('.sidebar nav a');
+const subnavPills = document.querySelectorAll('.subnav-pill');
 const sections = document.querySelectorAll('main section[id]');
+
 const navObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    const link = document.querySelector('.sidebar nav a[href="#' + entry.target.id + '"]');
-    if(!link) return;
-    if(entry.isIntersecting){
+    if(!entry.isIntersecting) return;
+    const id = entry.target.id;
+
+    const link = document.querySelector('.sidebar nav a[href="#' + id + '"]');
+    if(link){
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     }
+
+    const pill = document.querySelector('.subnav-pill[href="#' + id + '"]');
+    if(pill){
+      subnavPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      pill.scrollIntoView({ behavior:'smooth', inline:'center', block:'nearest' });
+    }
   });
-}, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+}, { rootMargin: '-140px 0px -55% 0px', threshold: 0 });
 sections.forEach(s => navObserver.observe(s));
 
 // ---------- Terminal typing animation ----------
